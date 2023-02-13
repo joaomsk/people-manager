@@ -1,0 +1,18 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/v1
+
+spring:
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      ddl-auto: create-drop
+    open-in-view: true
+  datasource:
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    url: ${MYSQL_URL}
+    driverClassName: com.mysql.cj.jdbc.Driver
